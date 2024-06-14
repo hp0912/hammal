@@ -1,8 +1,9 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
+dependencies:
+  '@cloudflare/workerd-darwin-arm64':
+    specifier: ^1.20240610.1
+    version: 1.20240610.1
 
 devDependencies:
   '@cloudflare/workers-types':
@@ -44,6 +45,13 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@cloudflare/workerd-darwin-arm64@1.20240610.1:
+    resolution: {integrity: sha512-bRe/y/LKjIgp3L2EHjc+CvoCzfHhf4aFTtOBkv2zW+VToNJ4KlXridndf7LvR9urfsFRRo9r4TXCssuKaU+ypQ==}
+    engines: {node: '>=16'}
+    cpu: [arm64]
+    os: [darwin]
+    dev: false
 
   /@cloudflare/workerd-linux-64@1.20240605.0:
     resolution: {integrity: sha512-zqOWDrYEudW5JCcU8lxCFQ96UHJJHrM+uvGaRS4u5nJaEgMr2z7u9I2286+l1R3JWvJdqj9ehGuHQvZkaTADxw==}
@@ -833,3 +841,7 @@ packages:
   /zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
