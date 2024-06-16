@@ -127,3 +127,56 @@ Server: Docker Engine - Community
   Version:          0.19.0
   GitCommit:        de40ad0
 ```
+
+### Debian 默认没有安装 iptables
+
+> 检查是否安装 iptables
+
+```
+which iptables
+```
+
+> Ubuntu/Debian
+
+```
+sudo apt-get update
+sudo apt-get install iptables
+```
+
+> CentOS/RHEL
+
+```
+sudo yum install iptables
+```
+
+> Arch Linux
+
+```
+sudo pacman -S iptables
+```
+
+> 查看 iptables 版本
+
+```
+iptables –-version
+
+# 查看 iptables 状态
+sudo systemctl status iptables
+
+# 如果 iptables 未运行，尝试启动
+sudo systemctl start iptables
+```
+
+> 创建软连接
+
+If you’ve confirmed that ‘iptables’ is installed and the service is running, but you still encounter the error, it might not be in your PATH. You can add it to your PATH by modifying your shell’s profile configuration file. For example, if you’re using Bash, you can add the following line to your `~/.bashrc` or `~/.bash_profile`:
+
+```
+export PATH=$PATH:/sbin
+```
+
+After making this change, reload your shell or run
+
+```
+source ~/.bashrc
+```
