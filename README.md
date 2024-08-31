@@ -212,4 +212,7 @@ sudo apt install nginx
 sudo systemctl start nginx
 
 sudo systemctl status nginx
+
+sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTPS'
 ```
