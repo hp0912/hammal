@@ -180,3 +180,36 @@ After making this change, reload your shell or run
 ```
 source ~/.bashrc
 ```
+
+### 安装 docker-compose
+
+```
+curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64 > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+```
+
+### 配置 docker 代理
+
+```
+cd /etc
+
+mkdir docker
+
+vim /etc/docker/daemon.json
+
+{
+  "registry-mirrors": [
+    "https://dp.houhoukang.com"
+  ]
+}
+```
+
+### 安装 nginx
+
+```
+sudo apt install nginx
+
+sudo systemctl start nginx
+
+sudo systemctl status nginx
+```
